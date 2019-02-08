@@ -5,9 +5,9 @@ Lightning solution to clone opportunity with products
 Based on the [CloneOpp component by Naval Sharma](https://github.com/sfcure/CloneOpp) - this project extends his excellent work to try and improve and expand it's abilities.
 
 ## Salesforce Idea
-[Here's a link](https://success.salesforce.com/ideaView?id=0873A000000cMbMQAU) to the Idea for Salesforce to restore this as standard
+[Here's a link](https://success.salesforce.com/ideaView?id=0873A000000cMbMQAU) to the Idea for Salesforce to restore this as standard.
 
-## Differences from CloneOpp
+## Differences from CloneOpp (correct as of February 2019)
 - In CloneOpp the opportunity is cloned without any input from the user, based on fields which are placed in a fieldset.  There is no way for changes to be made to the opportunity before the clone takes place
    * _This component replicates Salesforce's own Clone behaviour by displaying the opportunity page layout and allowing changes before the clone takes place_
 - In CloneOpp, the opportunity product fields are hard coded into the table meaning you can only change the values of Quantity, Sales Price, Date and Description
@@ -42,7 +42,8 @@ This package is only available as an unmanaged package
 - Production [installation](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006JHl&isdtp=p1)
 
 ## Limitations
-Relationship fields (lookup and master detail) cannot be added to the 'Clone Opportunity Editable Field Set' or you will receive an error when attempting to clone the lines.  This is due to a limitation in the Lightning:Datatable component.
+- Relationship fields (lookup and master detail) cannot be added to the 'Clone Opportunity Editable Field Set' or you will receive an error when attempting to clone the lines.  This is due to a limitation in the Lightning:Datatable component
+- This has not been tested in multiple orgs so other limitations may exist which I'm not yet aware of
 
 ## Credit
 Again, credit must be given to [Naval Sharma](https://github.com/sfcure/CloneOpp) and his CloneOpp component which formed the basis for this project.
