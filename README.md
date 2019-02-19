@@ -38,8 +38,8 @@ Once the clone has completed you will be redirected to the new opportunity.
 
 ## Packages
 This package is only available as an unmanaged package
-- Sandbox [installation](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006JHl&isdtp=p1)
-- Production [installation](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006JHl&isdtp=p1)
+- Sandbox [installation](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006Jea)
+- Production [installation](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006Jea)
 
 ## Limitations
 - Relationship fields (lookup and master detail) cannot be added to the 'Clone Opportunity Editable Field Set' or you will receive an error when attempting to clone the lines.  This is due to a limitation in the Lightning:Datatable component
