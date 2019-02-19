@@ -28,7 +28,7 @@ private class CloneOpportunityControllerTest {
         insert endUserAcc;
 
         Opportunity opp = new Opportunity(Name = 'Test End User - test product - 1', AccountId = endUserAcc.Id,
-                CurrencyIsoCode = 'USD', StageName = 'New', CloseDate = System.today().addDays(1));
+                StageName = 'New', CloseDate = System.today().addDays(1));
 
         insert opp;
 

@@ -10,8 +10,12 @@ public class CloneOpportunityController {
     public static String cloneOpportunityFields(String opportunityId, String opportunityJson) {
         Opportunity clonedOppValues = (Opportunity)JSON.deserialize(opportunityJson, Opportunity.class);
         Map<String, Object> fieldsToValue = clonedOppValues.getPopulatedFieldsAsMap();
-        String opportunityQuery = 'SELECT Id, RecordTypeId, ';
+        String opportunityQuery = 'SELECT Id, ';
 
+        if(Schema.SObjectType.Opportunity.getRecordTypeInfosByName().size() > 1) {
+            opportunityQuery += 'RecordTypeId, ';
+        }
+        
         //query all the fields in the page layout the user has filled out
         for( String fieldName : fieldsToValue.keySet() ) {
             if(!opportunityQuery.containsIgnoreCase(fieldName)) {
