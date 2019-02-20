@@ -36,10 +36,22 @@ Once the clone has completed you will be redirected to the new opportunity.
    * Open 'Clone Opportunity Editable Field Set' for editing
    * Add and remove fields to the field set which you wish to be made available for editing before the lines are cloned.  Fields included in this field set will be displayed in a table so users can modify the values.  Field Level Security is respected and formula fields added to this field set will be displayed in the table but not editable.
 
-## Packages
+## Packages (version 1.4)
 This package is only available as an unmanaged package
-- Sandbox [installation](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006Jea)
-- Production [installation](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006Jea)
+- Sandbox [installation](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006M9s)
+- Production [installation](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5B0000006M9s)
+
+## Changelog
+### version 1.4 (2019-02-20)
+#### Fixed
+- Trying to clone lines without ever opening an inline-edit field causes 'changes' function parameter to be null, causing an exception in the apex controller.  Updated controller to handle null
+
+### version 1.3 (2019-02-19)
+#### Removed
+- Removed org requirements for opportunity record types and multi-currency
+
+### version 1.2 (2019-02-06)
+- Initial published version
 
 ## Limitations
 - Relationship fields (lookup and master detail) cannot be added to the 'Clone Opportunity Editable Field Set' or you will receive an error when attempting to clone the lines.  This is due to a limitation in the Lightning:Datatable component
