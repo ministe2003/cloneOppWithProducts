@@ -154,7 +154,10 @@ public class CloneOpportunityController {
     @AuraEnabled
     public static void cloneOpportunityLineItems( Id sourceOppId, Id clonedOppId, List<OpportunityLineItem>  lstLineItems, List<OpportunityLineItem>  changes ){
         SavePoint sp = Database.setSavepoint();
-        Map<Id, OpportunityLineItem> changesMap = new Map<Id, OpportunityLineItem>(changes);
+        Map<Id, OpportunityLineItem> changesMap = new Map<Id, OpportunityLineItem>();
+        if(changes != null){
+            changesMap.putAll(changes);
+        }
 
         try {
             //update original lines with inline changes.
